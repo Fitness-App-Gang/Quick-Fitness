@@ -134,8 +134,15 @@ Optional:
     `GET`    | /regions | gets all regions
     `GET`    | /regions/byId/:id | gets specific region by :id
     `GET`    | /characters/paths/:name | gets a character's path with a given name
+    
+    
+    
+    
 
-# Top Ideas
+## Basic Wireframe
+<img src='BasicWireframe.png' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+### Top Ideas
 #Fitness Tracker - with each body part, and it gives you a list of excercises to do and videos
 #Body figure with clickable muscles that take you to the muscle explinations, and excercises
 #easy medium and hard levels for exercises and a custom sets and reps option
@@ -152,7 +159,7 @@ Optional:
     * feed with parse
 
 
-# Other Ideas
+### Other Ideas
 #News app, and it gives local news based on on your area, watchlist feature
 #Car app, enter model year, and gives the look of the car
 #Instagram
