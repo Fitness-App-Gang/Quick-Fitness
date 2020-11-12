@@ -131,7 +131,7 @@ Optional:
             }
         });
           ```
-   - Excersice Screen
+   - Exercise Screen
       - (Read/GET) Query excercise object where muscle group is equal to muscle button clicked
       - (Read/GET) Query all excercises where muscle greoup is equal to muscle button clicked
    - Profile Screen
