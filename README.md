@@ -88,57 +88,76 @@ Optional:
 ### Networking
 #### List of network requests by screen
    - Home Feed Screen
-      - (Read/GET) Query all posts where user is author
-         ```swift
-         let query = PFQuery(className:"Post")
-         query.whereKey("author", equalTo: currentUser)
-         query.order(byDescending: "createdAt")
-         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-            if let error = error {
-               print(error.localizedDescription)
-            } else if let posts = posts {
-               print("Successfully retrieved \(posts.count) posts.")
-           // TODO: Do something with posts...
-            }
-         }
+      - (Read/GET) Query all posts
+         ```
+          ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
+          query.include(Post.KEY_USER);
+          query.setLimit(20);
+          query.addDescendingOrder(Post.KEY_CREATED);
+          query.findInBackground(new FindCallback<Post>() {
+            @Override
+            public void done(List<Post> posts, ParseException e) {
+                if(e != null){
+                    Log.e(TAG, "Issue getting posts", e);
+                }
+                for (Post post: posts){
+                    Log.i(TAG, "Post: " + post.getDescription() +", USERNAME: " + post.getUser().getUsername());
+                }
          ```
       - (Create/POST) Create a new like on a post
       - (Delete) Delete existing like
+   - Post Detail Screen
+      - (Read/GET) Query post object
+      - (Read/GET) Query all comments under post object
       - (Create/POST) Create a new comment on a post
       - (Delete) Delete existing comment
    - Create Post Screen
       - (Create/POST) Create a new post object
+          ```
+          Post post = new Post();
+          post.setDescription(description);
+          post.setImage(new ParseFile(photoFile));
+          post.setUser(currentUser);
+          post.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if(e != null){
+                    Log.e(TAG, "Error while saving!",e);
+                    Toast.makeText(getContext(), "Error while saving!", Toast.LENGTH_SHORT).show();
+                }
+                Log.i(TAG, "Post save was successful");
+                etDiscription.setText("");
+                ivPostImage.setImageResource(0);
+            }
+        });
+          ```
+   - Excersice Screen
+      - (Read/GET) Query excercise object where muscle group is equal to muscle button clicked
+      - (Read/GET) Query all excercises where muscle greoup is equal to muscle button clicked
    - Profile Screen
       - (Read/GET) Query logged in user object
       - (Update/PUT) Update user profile image
-#### [OPTIONAL:] Existing API Endpoints
-##### An API Of Ice And Fire
-- Base URL - [http://www.anapioficeandfire.com/api](http://www.anapioficeandfire.com/api)
-
-   HTTP Verb | Endpoint | Description
-   ----------|----------|------------
-    `GET`    | /characters | get all characters
-    `GET`    | /characters/?name=name | return specific character by name
-    `GET`    | /houses   | get all houses
-    `GET`    | /houses/?name=name | return specific house by name
-
-##### Game of Thrones API
-- Base URL - [https://api.got.show/api](https://api.got.show/api)
-
-   HTTP Verb | Endpoint | Description
-   ----------|----------|------------
-    `GET`    | /cities | gets all cities
-    `GET`    | /cities/byId/:id | gets specific city by :id
-    `GET`    | /continents | gets all continents
-    `GET`    | /continents/byId/:id | gets specific continent by :id
-    `GET`    | /regions | gets all regions
-    `GET`    | /regions/byId/:id | gets specific region by :id
-    `GET`    | /characters/paths/:name | gets a character's path with a given name
-    
-    
-    
-    
-
+      - (Read/GET) Query all posts where user is author 
+         ```
+          ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
+          query.include(Post.KEY_USER);
+          query.whereEqualTo(Post.KEY_USER, ParseUser.getCurrentUser());
+          query.setLimit(20);
+          query.addDescendingOrder(Post.KEY_CREATED);
+          query.findInBackground(new FindCallback<Post>() {
+            @Override
+            public void done(List<Post> posts, ParseException e) {
+                if(e != null){
+                    Log.e(TAG, "Issue getting posts", e);
+                }
+                for (Post post: posts){
+                    Log.i(TAG, "Post: " + post.getDescription() +", USERNAME: " + post.getUser().getUsername());
+                }
+         ```
+       - (Read/GET) Query all posts where user has liked
+       - (Read/GET) Query all posts where user has saved
+       
+       
 ## Basic Wireframe
 <img src='BasicWireframe.png' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
