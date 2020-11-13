@@ -44,10 +44,10 @@ Gives users information about muscle groups and how to work them out. Allows the
    * Let users communicate and share their workout plans and fun exercises
 * Profile Screen 
    * Allows user to view their posts, saved routines, upload a photo and fill in information that is interesting to them and others.
-* Muscle Selection Screen.
-   * Allows user to select the muscle group that they would like to work out. Allo be able to choose their desired muscle, artist, genre of preference and begin listening and interacting with others..
+* Muscle Selection Screen
+   * Allows user to select the muscle group that they would like to work out. Also be able to choose their desired muscle, artist, genre of preference and begin listening and interacting with others..
 * Wourkout Information Screen
-    * Gives info on the muscle group and lists excercises to do to build that muscle up. Also gives video references to help you follow along.
+    * Gives info on the muscle group and lists exercises to do to build that muscle up. Also gives video references to help you follow along.
     * record your sets and reps for each session
 
 ### 3. Navigation
@@ -73,18 +73,65 @@ Optional:
 
 ## Schema
 ### Models
-#### Post
+#### User
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | objectId      | String   | unique id for the user post (default field) |
-   | author        | Pointer to User| image author |
-   | image         | File     | image that user posts |
-   | caption       | String   | image caption by author |
-   | commentsCount | Number   | number of comments that has been posted to an image |
-   | likesCount    | Number   | number of likes for the post |
+   | objectId      | String   | unique id for the User (default field) |
+   | username        | String | user's display name |
+   | password         | String     | user's password |
+   | email         | String     | user's email |
+   | profilePicture | Image | user's uploaded profile picture, or default picture |
+   | bio         | String     | short description of the user's bio |
+
+#### SavedRoutines
+**Query by matching user.objectId to SavedRoutineItem.ownerId**
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the SavedRoutines (default field) |
+   | ownerId        | Pointer to User| id of user who saved a routine  |
+   | routineId         | Pointer to Routine     | id of the routine the user wished to save |
+
+#### Routine
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the Routine (default field) |
+   | author        | Pointer to User| id of routine author |
+   | title       | String   | routine title by author |
+   | description       | String   | routine description by author |
+   | difficulty    | Number   | difficulty rating for the routine |
    | createdAt     | DateTime | date when post is created (default field) |
    | updatedAt     | DateTime | date when post is last updated (default field) |
+
+#### Comment
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the Comment (default field) |
+   | author        | Pointer to User| id of comment author |
+   | text | String | text body of the comment |
+   | parentRoutine | Pointer to Routine | id of routine this comment was replying to |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
+
+#### MuscleGroup
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the MuscleGroup (default field) |
+   | name | String | what the muscle group does and why you should work it out |
+
+
+#### Exercise
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the Exercise (default field) |
+   | name | String | name of the exercise |
+   | videoLink | String | link to a demonstration of the exercise |
+   | muscle | Pointer to MuscleGroup | id of the MuscleGroup that the exercise works out |
+
 ### Networking
 #### List of network requests by screen
    - Home Feed Screen
@@ -159,7 +206,7 @@ Optional:
        
        
 ## Basic Wireframe
-<img src='BasicWireframe.png' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='BasicWireframe.png' title='Wireframe' width='' alt='Wireframe' />
 
 ### Top Ideas
 #Fitness Tracker - with each body part, and it gives you a list of excercises to do and videos
@@ -176,7 +223,6 @@ Optional:
 * social fragment features:
     * sharing workouts and routines
     * feed with parse
-
 
 ### Other Ideas
 #News app, and it gives local news based on on your area, watchlist feature
