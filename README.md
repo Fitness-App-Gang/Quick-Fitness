@@ -85,12 +85,20 @@ Optional:
    | bio         | String     | short description of the user's bio |
 
 #### SavedRoutines
-**Query by matching user.objectId to SavedRoutineItem.ownerId**
+**Query by matching user.objectId to SavedRoutines.ownerId, then matching SavedRoutines.routineId to Routine.objectId**
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | objectId      | String   | unique id for the SavedRoutines (default field) |
    | ownerId        | Pointer to User| id of user who saved a routine  |
    | routineId         | Pointer to Routine     | id of the routine the user wished to save |
+
+#### LikedRoutines
+**Query by matching user.objectId to LikedRoutines.ownerId, then matching SavedRoutines.routineId to Routine.objectId**
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the LikedRoutines (default field) |
+   | ownerId        | Pointer to User| id of user who liked a routine  |
+   | routineId         | Pointer to Routine     | id of the routine the user wished to like |
 
 #### Routine
 
@@ -101,6 +109,7 @@ Optional:
    | title       | String   | routine title by author |
    | description       | String   | routine description by author |
    | difficulty    | Number   | difficulty rating for the routine |
+   | likes    | Number   | number of likes for the routine |
    | createdAt     | DateTime | date when post is created (default field) |
    | updatedAt     | DateTime | date when post is last updated (default field) |
 
@@ -179,8 +188,7 @@ Optional:
         });
           ```
    - Exercise Screen
-      - (Read/GET) Query excercise object where muscle group is equal to muscle button clicked
-      - (Read/GET) Query all excercises where muscle greoup is equal to muscle button clicked
+      - (Read/GET) Query all exercise object where muscle group is equal to muscle button clicked
    - Profile Screen
       - (Read/GET) Query logged in user object
       - (Update/PUT) Update user profile image
