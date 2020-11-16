@@ -129,7 +129,8 @@ Optional:
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | objectId      | String   | unique id for the MuscleGroup (default field) |
-   | name | String | what the muscle group does and why you should work it out |
+   | name | String | the name of the muscle group |
+   | description | String | what the muscle group does and why you should work it out |
 
 
 #### Exercise
