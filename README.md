@@ -22,19 +22,20 @@ Gives users information about muscle groups and how to work them out. Allows the
 
 **Required Must-have Stories**
 
-* User logs in to access social features and routines.
-* User picks what body part they want to work out, and gets a list of workouts, and videos to follow.
-* Users can can view and post routines and progress.
-* Profile pages for each user
-* Settings (Accesibility, Notification, General, etc.)
+- [x] User logs in to access app.
+- [x] User can navigate different screens with bottom navigation view
+- [ ] User picks what body part they want to work out, and gets a list of workouts, and videos to follow.
+- [ ] Users can can view and post routines and progress.
+- [ ] Profile pages for each user
+- [ ] Settings (Accesibility, Notification, General, etc.)
 
 **Optional Nice-to-have Stories**
 
-* Let user set custom sets and reps
-* Chat functionality between users
-* Allow users to add workouts to body parts
-* Allow users to track progress
-* Allow users to track and modify sets and reps
+- [ ] Let user set custom sets and reps
+- [ ] Chat functionality between users
+- [ ] Allow users to add workouts to body parts
+- [ ] Allow users to track progress
+- [ ] Allow users to track and modify sets and reps
 
 <img src='https://github.com/Fitness-App-Gang/Quick-Fitness/blob/master/QuickFitness.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
