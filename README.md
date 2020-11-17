@@ -19,12 +19,6 @@ Gives users information about muscle groups and how to work them out. Allows the
 ## Product Spec
 ### 1. User Stories (Required and Optional)
 
-## Video Walkthrough
-Here's a walkthrough of implemented user stories:
-
-<img src='https://github.com/Fitness-App-Gang/Quick-Fitness/blob/master/QuickFitness.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 **Required Must-have Stories**
 
@@ -41,6 +35,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 * Allow users to add workouts to body parts
 * Allow users to track progress
 * Allow users to track and modify sets and reps
+
+<img src='https://github.com/Fitness-App-Gang/Quick-Fitness/blob/master/QuickFitness.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### 2. Screen Archetypes
 
