@@ -36,6 +36,7 @@ Gives users information about muscle groups and how to work them out. Allows the
 - [ ] Allow users to add workouts to body parts
 - [ ] Allow users to track progress
 - [ ] Allow users to track and modify sets and reps
+- [ ] Have saved stories save locally
 
 <img src='https://github.com/Fitness-App-Gang/Quick-Fitness/blob/master/QuickFitness.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
