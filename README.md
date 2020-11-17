@@ -22,7 +22,7 @@ Gives users information about muscle groups and how to work them out. Allows the
 ## Video Walkthrough
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/arsalaerfan/SimpleTweet/blob/master/TwitterApp2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/Fitness-App-Gang/Quick-Fitness/blob/master/QuickFitness.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
