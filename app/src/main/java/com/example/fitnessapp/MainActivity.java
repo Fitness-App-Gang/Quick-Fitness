@@ -1,14 +1,13 @@
 package com.example.fitnessapp;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-
-import com.example.fitnessapp.fragments.ExerciseFragment;
 import com.example.fitnessapp.fragments.FeedFragment;
 import com.example.fitnessapp.fragments.MuscleFragment;
 import com.example.fitnessapp.fragments.ProfileFragment;
