@@ -30,11 +30,39 @@
         android:layout_marginTop="0dp"
         tools:text="Description" />
 
+
     <FrameLayout
+        android:id="@+id/flTabs"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/tvDescription"
         android:layout_marginTop="0dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tlTabBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tiPosts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Posts" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tiSaved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saved" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tiLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Likes" />
+
+        </com.google.android.material.tabs.TabLayout>
+
     </FrameLayout>
 
 </RelativeLayout>
