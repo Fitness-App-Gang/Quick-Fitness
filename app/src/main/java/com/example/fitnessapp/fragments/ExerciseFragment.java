@@ -13,7 +13,11 @@ import androidx.fragment.app.Fragment;
 import com.example.fitnessapp.R;
 
 public class ExerciseFragment extends Fragment {
+
+    public static final String TAG = "ExerciseFragment";
+
     TextView tvTest;
+
     public ExerciseFragment() {
         // Required empty public constructor
     }

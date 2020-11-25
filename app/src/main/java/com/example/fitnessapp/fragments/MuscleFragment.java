@@ -14,6 +14,8 @@ import com.example.fitnessapp.R;
 
 public class MuscleFragment extends Fragment {
 
+    public static final String TAG = "MuscleFragment";
+
     TextView tvTest;
 
     public MuscleFragment() {

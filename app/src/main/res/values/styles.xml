@@ -7,5 +7,17 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="difficultyRating" parent="Widget.AppCompat.RatingBar.Small">
+<!--        <item name="colorControlNormal">@color/colorAccent</item>-->
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlNormal">@android:color/holo_green_light</item>
+    </style>
+    <style name="difficultyRatingLrg" parent="Widget.AppCompat.RatingBar">
+        <!--        <item name="colorControlNormal">@color/colorAccent</item>-->
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlNormal">@android:color/holo_green_light</item>
+    </style>
+    <style name="floatingButton" parent="Widget.Design.FloatingActionButton">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
 </resources>

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Fitness App</string>
+    <string name="routine_default">-100 pushups:  Build up that upper body strength. Triceps, pectorals, and shoulders all in one.
+    \n-100 Sit-ups: Build up that core strength. Rectus abdominis, transverse abdominis, and obliques, hip flexors, chest,
+    and neck! What value! \n-100 Squats: Build up not only your lower body, but also your core! rectus abdominis, obliques,
+    transverse abdominis, and erector spinae to build up balance, strength, and power.  \n-10km run: Build up that core!
+    And everything else, such as gluteals, quadriceps, hamstrings, and calf muscles!</string>
 </resources>
