@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment fragment;
                 switch (item.getItemId()) {
-//                    case R.id.action_muscle:
-//                        fragment = new MuscleFragment();
-//                        break;
+                    case R.id.action_muscle:
+                        fragment = new MuscleFragment();
+                        break;
                     case R.id.action_home:
                         fragment = new FeedFragment();
                         break;
