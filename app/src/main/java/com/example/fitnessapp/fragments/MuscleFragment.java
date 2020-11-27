@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,8 +13,6 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.fitnessapp.ExerciseActivity;
-import com.example.fitnessapp.MainActivity;
-import com.example.fitnessapp.ParseApplication;
 import com.example.fitnessapp.R;
 
 public class MuscleFragment extends Fragment {
