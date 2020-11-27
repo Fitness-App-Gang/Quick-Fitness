@@ -28,6 +28,5 @@ public class ExerciseFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        tvTest = view.findViewById(R.id.tvmuscle);
     }
 }
