@@ -24,7 +24,7 @@ Gives users information about muscle groups and how to work them out. Allows the
 
 - [x] User logs in to access app.
 - [x] User can navigate different screens with bottom navigation view
-- [ ] User picks what body part they want to work out
+- [x] User picks what body part they want to work out
    - [ ] gets a list of workouts, and videos to follow.
 - [X] Users can can view and post routines and progress.
    - [ ] User can click on post to view full routine and the comments for it.
