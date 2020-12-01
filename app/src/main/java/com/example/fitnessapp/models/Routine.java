@@ -12,6 +12,7 @@ public class Routine extends ParseObject {
     public static final String KEY_DESCRIPTION="description";
     public static final String KEY_DIFFICULTY="difficulty";
     public static final String KEY_LIKES="likes";
+    public static final String KEY_CREATED="createdAt";
 
     public ParseObject getAuthor(){
         return getParseObject(KEY_AUTHOR);
@@ -50,5 +51,9 @@ public class Routine extends ParseObject {
     }
 
     public void setLikes(int likes) {put(KEY_LIKES, likes);}
+
+    public String getCreated(){
+        return getString(KEY_CREATED);
+    }
 }
 
