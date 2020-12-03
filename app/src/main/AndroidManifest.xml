@@ -26,10 +26,10 @@
             android:value="https://parseapi.back4app.com" />
         <meta-data
             android:name="com.parse.APPLICATION_ID"
-            android:value="oKMOelDcUXdM2M4ONnhJL9fKUHQnSSr6dy5cYxnK" />
+            android:value="APP_API_KEY" />
         <meta-data
             android:name="com.parse.CLIENT_KEY"
-            android:value="g6M0dfasOiplXHh63Mr2W5u1Lh4YHyZ8nHCgXoT1" />
+            android:value="ClIENT_KEY" />
 
         <activity android:name=".SignUpActivity" />
         <activity android:name=".MainActivity" />
