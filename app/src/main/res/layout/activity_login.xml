@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
     android:gravity="center"
+    android:background="@drawable/customborder"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <ImageView
-        android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_width="333dp"
+        android:layout_height="330dp"
         android:layout_marginTop="-30dp"
         android:src="@drawable/logo" />
 
@@ -73,6 +72,26 @@
         android:layout_marginTop="30dp"
         android:background="@drawable/round_button"
         android:text="Login"
+        android:textStyle="normal"
+        android:textColor="@android:color/white" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="-20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/transparent"
+        android:text="Don't have an account?"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/round_button2"
+        android:text="Sign Up"
         android:textColor="@android:color/white" />
 
 
