@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/main_back"
-    tools:context=".ChestActivity">
+    tools:context=".BackActivity">
 
 
     <RelativeLayout
@@ -29,7 +29,7 @@
             android:fontFamily="sans-serif-black"
             android:paddingLeft="20dp"
             android:paddingTop="20dp"
-            android:text="Chest Exercises"
+            android:text="Back Exercises"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="40sp"
             android:textStyle="bold"></TextView>
@@ -66,7 +66,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="10dp"
-            app:cardBackgroundColor="@android:color/white"
+            app:cardBackgroundColor="#fafbfd"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp">
 
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="28dp"
-                android:text="3x20 sets"
+                android:text="4x8 sets"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="30sp"
@@ -92,11 +92,11 @@
 
                 <ImageView
                     android:layout_width="176dp"
-                    android:layout_height="278dp"
+                    android:layout_height="235dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="15dp"
                     android:layout_marginRight="3dp"
-                    android:src="@drawable/chest1" />
+                    android:src="@drawable/back1" />
 
 
             </LinearLayout>
@@ -113,7 +113,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            app:cardBackgroundColor="@android:color/white"
+            app:cardBackgroundColor="#fafbfd"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp">
 
@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="28dp"
-                android:text="3x10 sets"
+                android:text="4x12 sets"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="30sp"
@@ -137,12 +137,12 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:layout_width="187dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="25dp"
                     android:layout_marginBottom="-3dp"
-                    android:layout_width="234dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/chest3" />
+                    android:src="@drawable/back2" />
 
 
             </LinearLayout>
@@ -159,7 +159,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="10dp"
-            app:cardBackgroundColor="@android:color/white"
+            app:cardBackgroundColor="#fafbfd"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp">
 
@@ -168,7 +168,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="28dp"
-                android:text="4x15 sets"
+                android:text="4x12 sets"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="30sp"
@@ -187,7 +187,7 @@
                     android:layout_height="216dp"
                     android:layout_marginTop="25dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/chest4" />
+                    android:src="@drawable/back3" />
 
 
             </LinearLayout>
@@ -204,7 +204,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            app:cardBackgroundColor="@android:color/white"
+            app:cardBackgroundColor="#f5f8fa"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp">
 
@@ -214,7 +214,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="28dp"
-                android:text="4x10 sets"
+                android:text="4x8 sets"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="30sp"
@@ -229,12 +229,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="175dp"
-                    android:layout_height="211dp"
+                    android:layout_width="162dp"
+                    android:layout_height="206dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="15dp"
-                    android:layout_marginRight="8dp"
-                    android:src="@drawable/chest2" />
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/back4" />
 
 
             </LinearLayout>

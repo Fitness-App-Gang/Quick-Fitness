@@ -12,6 +12,7 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.fitnessapp.BicepsActivity;
+import com.example.fitnessapp.ChestActivity;
 import com.example.fitnessapp.R;
 
 public class MuscleFragment extends Fragment {
@@ -60,7 +61,7 @@ public class MuscleFragment extends Fragment {
         chest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(getActivity(), BicepsActivity.class);
+                Intent intentLoadNewActivity = new Intent(getActivity(), ChestActivity.class);
                 // bind data to intent for each muscle part
                 startActivity(intentLoadNewActivity);
             }

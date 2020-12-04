@@ -46,34 +46,6 @@ public class SignUpActivity extends AppCompatActivity {
                 String confirmPassword = etConfirmPassword.getText().toString();
                 signUpUser(username, password, confirmPassword);
 
-//
-//                if( TextUtils.isEmpty(etUsername.getText())){
-//                    etUsername.setError( "Name is required!" );
-//                }else if( TextUtils.isEmpty(etPassword.getText())){
-//                    etPassword.setError( "Password is required!" );
-//                }else if( TextUtils.isEmpty(etConfirmPassword.getText())){
-//                    etConfirmPassword.setError( "Confirm password is required!" );
-//                }else if(!etPassword.getText().toString().equals(etConfirmPassword.getText().toString())){
-//                    Toast.makeText(SignUpActivity.this, "Passwords are not the same!", Toast.LENGTH_LONG).show();
-//                }else{
-//                    ParseUser user = new ParseUser();
-//                    user.setUsername(etUsername.getText().toString().trim());
-//                    user.setPassword(etPassword.getText().toString());
-//                    user.signUpInBackground(new SignUpCallback() {
-//                        @Override
-//                        public void done(ParseException e) {
-//                            if (e == null) {
-//                                Toast.makeText(SignUpActivity.this, "Welcome!", Toast.LENGTH_LONG).show();
-//                                Intent intent = new Intent(SignUpActivity.this, MuscleFragment.class);
-//                                startActivity(intent);
-//                                finish();
-//                            } else {
-//                                ParseUser.logOut();
-//                                Toast.makeText(SignUpActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-//                            }
-//                        }
-//                    });
-//                }
             }
         });
     }
@@ -108,7 +80,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void goMuscleFragment() {
-        Intent i = new Intent(this, MuscleFragment.class);
+        Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
 //        finish();
     }

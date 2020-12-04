@@ -3,14 +3,12 @@ package com.example.fitnessapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 
-public class BicepsActivity extends AppCompatActivity {
+public class LegsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_biceps);
+        setContentView(R.layout.activity_legs);
     }
-
 }
