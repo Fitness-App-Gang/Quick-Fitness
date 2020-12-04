@@ -7,7 +7,7 @@
 
     <ImageView
         android:id="@+id/ivProfile"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="50dp"
         android:contentDescription="User Profile Picture"
         tools:srcCompat="@tools:sample/avatars" />
@@ -39,39 +39,47 @@
         android:layout_below="@+id/tvDescription"
         android:layout_marginTop="0dp">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tlTabBar"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabMode="fixed">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-<!--            <com.google.android.material.tabs.TabItem-->
-<!--                android:id="@+id/tiPosts"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Posts" />-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-<!--            <com.google.android.material.tabs.TabItem-->
-<!--                android:id="@+id/tiSaved"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Saved" />-->
+                <Button
+                    android:id="@+id/btnPosts"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Posts" />
 
-<!--            <com.google.android.material.tabs.TabItem-->
-<!--                android:id="@+id/tiLikes"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Likes" />-->
+                <Button
+                    android:id="@+id/btnSaved"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Saved" />
 
-        </com.google.android.material.tabs.TabLayout>
+                <Button
+                    android:id="@+id/btnLiked"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Liked" />
+            </LinearLayout>
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@android:color/white" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProfileRoutines"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
+        </LinearLayout>
     </FrameLayout>
 
 </RelativeLayout>

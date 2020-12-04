@@ -6,7 +6,7 @@ import com.parse.ParseUser;
 
 @ParseClassName("SavedRoutines")
 public class SavedRoutines extends ParseObject {
-    public static final String KEY_OWNERID="username";
+    public static final String KEY_OWNERID="ownerId";
     public static final String KEY_ROUTINEID="routineId";
 
     public ParseUser getOwnerId(){
