@@ -31,11 +31,12 @@ public class ParseApplication extends Application {
         ParseObject.registerSubclass(Exercise.class);
 
 
-//        Parse.initialize(new Parse.Configuration.Builder(this)
-//                .applicationId(APP_API_KEY)
-//                .clientKey(ClIENT_KEY)
-//                .server("https://parseapi.back4app.com")
-//                .build()
-//        );
+        Parse.initialize(new Parse.Configuration.Builder(this)
+                .applicationId(APP_API_KEY)
+                .clientKey(ClIENT_KEY)
+                .server("https://parseapi.back4app.com")
+                .build()
+        );
+
     }
 }

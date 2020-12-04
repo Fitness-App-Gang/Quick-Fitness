@@ -2,6 +2,7 @@ package com.example.fitnessapp;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment fragment;
                 switch (item.getItemId()) {
-                    case R.id.action_muscle:
-                        fragment = new MuscleFragment();
-                        break;
+//                    case R.id.action_muscle:
+//                        fragment = new MuscleFragment();
+//                        break;
                     case R.id.action_home:
                         fragment = new FeedFragment();
                         break;

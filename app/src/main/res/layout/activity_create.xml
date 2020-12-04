@@ -4,10 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:background="@drawable/main_back"
     tools:context=".CreateActivity">
 
+
+    <TextView
+        android:id="@+id/textGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="19dp"
+        android:text="Create Routine"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"></TextView>
+
     <EditText
+        android:layout_marginTop="90dp"
+        android:background="@drawable/border"
         android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,13 +34,15 @@
         android:minLines="1"
         android:hint="Routine Title"/>
 
+
     <EditText
+        android:background="@drawable/border"
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/etTitle"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="-1dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
@@ -31,27 +50,32 @@
         android:hint="Routine Description"/>
 
     <TextView
+        android:background="@drawable/border"
         android:id="@+id/tvDifficulty"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/etDescription"
         android:layout_marginTop="26dp"
         android:textAlignment="center"
-        android:textSize="20dp"
+        android:textSize="24dp"
         android:textColor="@color/colorAccent"
         android:text="Set Difficulty:"
         />
 
     <RatingBar
         android:id="@+id/rvSetDifficulty"
-        android:theme="@style/difficultyRatingLrg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/etDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="17dp"
         android:layout_toEndOf="@+id/tvDifficulty"
         android:numStars="3"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="5dp"/>
+        android:progressBackgroundTint="@android:color/holo_green_dark"
+        android:progressTint="@android:color/black"
+        android:secondaryProgressTint="@android:color/black" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabCreate"
@@ -61,9 +85,20 @@
         android:layout_below="@+id/etDescription"
         android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="@android:color/white"
         android:src="@drawable/plus_fill"
-        android:tint="@color/colorAccent"
-        app:rippleColor="@color/colorPrimaryDark" />
+        android:tint="@android:color/holo_green_dark"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="203dp"
+        android:layout_height="221dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="-40dp"
+        app:srcCompat="@drawable/logo" />
 
 </RelativeLayout>
