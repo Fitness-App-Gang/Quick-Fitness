@@ -95,7 +95,7 @@ public class FeedFragment extends Fragment {
                     return;
                 }
                 for (Routine routine: objects){
-                    Log.i(TAG, "Routine: " + routine.getTitle() + ", USERNAME: " + routine.getParseObject("author").toString() + ", Description: " + routine.getDescription());
+                    Log.i(TAG, "Routine: " + routine.getTitle() + ", USERNAME: " + routine.getAuthor() + ", Description: " + routine.getDescription());
                 }
                 allRoutines.clear();
                 allRoutines.addAll(objects);

@@ -9,8 +9,8 @@ public class SavedRoutines extends ParseObject {
     public static final String KEY_OWNERID="username";
     public static final String KEY_ROUTINEID="routineId";
 
-    public ParseObject getOwnerId(){
-        return getParseObject(KEY_OWNERID);
+    public ParseUser getOwnerId(){
+        return getParseUser(KEY_OWNERID);
     }
 
     public void setOwnerId(ParseObject author){

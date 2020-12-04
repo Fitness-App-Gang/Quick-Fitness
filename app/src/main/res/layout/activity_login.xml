@@ -10,9 +10,9 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:layout_width="314dp"
-        android:layout_height="317dp"
-
+        android:layout_width="333dp"
+        android:layout_height="330dp"
+        android:layout_marginTop="-30dp"
         android:scaleType="centerCrop"
         android:src="@drawable/logo" />
 
@@ -94,6 +94,13 @@
         android:background="@drawable/round_button2"
         android:text="Sign Up"
         android:textColor="@android:color/white" />
-/>
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/round_button"
+        android:text="Sign Up"
+        android:textColor="@android:color/white" />
 
 </LinearLayout>
