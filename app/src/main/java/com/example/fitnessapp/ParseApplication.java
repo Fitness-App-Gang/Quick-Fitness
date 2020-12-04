@@ -14,8 +14,8 @@ import com.parse.ParseObject;
 
 public class ParseApplication extends Application {
 
-    public static final String APP_API_KEY = BuildConfig.APP_ID_KEY;
-    public static final String ClIENT_KEY = BuildConfig.CLIENT_KEY;
+//    public static final String APP_API_KEY = BuildConfig.APP_ID_KEY;
+//    public static final String ClIENT_KEY = BuildConfig.CLIENT_KEY;
 
     @Override
     public void onCreate() {
@@ -37,5 +37,6 @@ public class ParseApplication extends Application {
                 .server("https://parseapi.back4app.com")
                 .build()
         );
+
     }
 }
