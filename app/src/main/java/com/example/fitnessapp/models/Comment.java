@@ -10,8 +10,8 @@ public class Comment extends ParseObject {
     public static final String KEY_TEXT="text";
     public static final String KEY_PARENTROUTINE="parentRoutine";
 
-    public ParseObject getAuthor(){
-        return getParseObject(KEY_AUTHOR);
+    public ParseUser getAuthor(){
+        return getParseUser(KEY_AUTHOR);
     }
 
     public void setAuthor(ParseUser author){
