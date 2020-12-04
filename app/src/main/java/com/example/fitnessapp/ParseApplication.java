@@ -30,20 +30,14 @@ public class ParseApplication extends Application {
         ParseObject.registerSubclass(MuscleGroup.class);
         ParseObject.registerSubclass(Exercise.class);
 
-//
-//        Parse.initialize(new Parse.Configuration.Builder(this)
-//                .applicationId(APP_API_KEY)
-//                .clientKey(ClIENT_KEY)
-//                .server("https://parseapi.back4app.com")
-//                .build()
-//        );
 
         Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId("oKMOelDcUXdM2M4ONnhJL9fKUHQnSSr6dy5cYxnK")
-                .clientKey("g6M0dfasOiplXHh63Mr2W5u1Lh4YHyZ8nHCgXoT1")
+                .applicationId(APP_API_KEY)
+                .clientKey(ClIENT_KEY)
                 .server("https://parseapi.back4app.com")
                 .build()
         );
+
     }
 
 }
