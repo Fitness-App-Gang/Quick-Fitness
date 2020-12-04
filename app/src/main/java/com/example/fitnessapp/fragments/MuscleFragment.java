@@ -5,21 +5,19 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.example.fitnessapp.ExerciseActivity;
+import com.example.fitnessapp.BicepsActivity;
 import com.example.fitnessapp.R;
 
 public class MuscleFragment extends Fragment {
 
     public static final String TAG = "MuscleFragment";
 
-    TextView tvTest;
 
     CardView bicep;
     CardView chest;
@@ -50,11 +48,10 @@ public class MuscleFragment extends Fragment {
         shoulders = (CardView) view.findViewById(R.id.shoulders);
         abs = (CardView) view.findViewById(R.id.abs);
 
-//        tvTest = view.findViewById(R.id.tvmuscle);
         bicep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(getActivity(), ExerciseActivity.class);
+                Intent intentLoadNewActivity = new Intent(getActivity(), BicepsActivity.class);
                 // bind data to intent for each muscle part
                 startActivity(intentLoadNewActivity);
             }
@@ -63,7 +60,7 @@ public class MuscleFragment extends Fragment {
         chest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(getActivity(), ExerciseActivity.class);
+                Intent intentLoadNewActivity = new Intent(getActivity(), BicepsActivity.class);
                 // bind data to intent for each muscle part
                 startActivity(intentLoadNewActivity);
             }
@@ -72,7 +69,7 @@ public class MuscleFragment extends Fragment {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(getActivity(), ExerciseActivity.class);
+                Intent intentLoadNewActivity = new Intent(getActivity(), BicepsActivity.class);
                 // bind data to intent for each muscle part
                 startActivity(intentLoadNewActivity);
             }
@@ -81,7 +78,7 @@ public class MuscleFragment extends Fragment {
         legs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(getActivity(), ExerciseActivity.class);
+                Intent intentLoadNewActivity = new Intent(getActivity(), BicepsActivity.class);
                 // bind data to intent for each muscle part
                 startActivity(intentLoadNewActivity);
             }
@@ -90,7 +87,7 @@ public class MuscleFragment extends Fragment {
         shoulders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(getActivity(), ExerciseActivity.class);
+                Intent intentLoadNewActivity = new Intent(getActivity(), BicepsActivity.class);
                 // bind data to intent for each muscle part
                 startActivity(intentLoadNewActivity);
             }
@@ -99,7 +96,7 @@ public class MuscleFragment extends Fragment {
         abs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(getActivity(), ExerciseActivity.class);
+                Intent intentLoadNewActivity = new Intent(getActivity(), BicepsActivity.class);
                 // bind data to intent for each muscle part
                 startActivity(intentLoadNewActivity);
             }

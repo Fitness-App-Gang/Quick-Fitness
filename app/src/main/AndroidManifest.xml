@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<!--        <activity android:name=".DetailedRoutineActivity"></activity>-->
+        <activity android:name=".ChestActivity"></activity>
+        <!-- <activity android:name=".DetailedRoutineActivity"></activity> -->
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.parse.SERVER_URL"
             android:value="https://parseapi.back4app.com" />
@@ -33,8 +35,7 @@
 
         <activity android:name=".SignUpActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".CreateActivity"></activity>
-
+        <activity android:name=".CreateActivity" />
     </application>
 
 </manifest>
