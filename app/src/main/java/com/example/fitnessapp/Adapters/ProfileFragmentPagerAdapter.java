@@ -15,9 +15,8 @@ public class ProfileFragmentPagerAdapter extends FragmentPagerAdapter {
     private String tabTitles[] = new String[] { "Posts", "Saved", "Likes" };
     private Context context;
 
-    public ProfileFragmentPagerAdapter(FragmentManager fm, Context context){
+    public ProfileFragmentPagerAdapter(FragmentManager fm){
         super(fm);
-        this.context = context;
     }
 
     @NonNull

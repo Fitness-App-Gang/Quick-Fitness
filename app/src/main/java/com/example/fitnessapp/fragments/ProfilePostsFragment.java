@@ -17,8 +17,12 @@ import com.example.fitnessapp.R;
  */
 public class ProfilePostsFragment extends Fragment {
 
-    public static final String ARG_PAGE = "POSTS";
+    public static final String ARG_PAGE = "PAGE";
     private int mPage;
+
+    public ProfilePostsFragment(){
+
+    }
 
     public static ProfilePostsFragment newInstance(int page) {
         Bundle args = new Bundle();

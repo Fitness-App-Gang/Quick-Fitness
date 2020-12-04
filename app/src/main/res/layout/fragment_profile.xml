@@ -42,7 +42,8 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tlTabBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:tabMode="fixed">
 
 <!--            <com.google.android.material.tabs.TabItem-->
 <!--                android:id="@+id/tiPosts"-->
@@ -68,6 +69,7 @@
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_weight="1"
             android:background="@android:color/white" />
 
     </FrameLayout>

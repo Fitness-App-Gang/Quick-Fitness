@@ -12,12 +12,12 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.fitnessapp.Adapters.ProfileFragmentPagerAdapter;
+import com.example.fitnessapp.MainActivity;
 import com.example.fitnessapp.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class ProfileFragment extends Fragment {
 
-    TextView tlTabBar;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -34,7 +34,7 @@ public class ProfileFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewpager);
-        viewPager.setAdapter(new ProfileFragmentPagerAdapter(getFragmentManager(), getContext()));
+        viewPager.setAdapter(new ProfileFragmentPagerAdapter(getFragmentManager()));
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tlTabBar);
         tabLayout.setupWithViewPager(viewPager);
