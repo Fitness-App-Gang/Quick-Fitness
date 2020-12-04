@@ -101,14 +101,14 @@ public class SignUpActivity extends AppCompatActivity {
                         return;
                     }
                     Toast.makeText(SignUpActivity.this, "Successful sign up!", Toast.LENGTH_SHORT).show();
-                    goMainActivity();
+                    goMuscleFragment();
                 }
             });
         }
     }
 
-    private void goMainActivity() {
-        Intent i = new Intent(this, MainActivity.class);
+    private void goMuscleFragment() {
+        Intent i = new Intent(this, MuscleFragment.class);
         startActivity(i);
 //        finish();
     }

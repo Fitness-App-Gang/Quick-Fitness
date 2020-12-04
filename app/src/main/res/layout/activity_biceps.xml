@@ -27,8 +27,8 @@
             android:layout_marginBottom="-5dp"
             android:background="@android:color/white"
             android:fontFamily="sans-serif-black"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
             android:text="Bicep Exercises"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="40sp"
@@ -137,7 +137,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="25dp"
                     android:layout_width="234dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"

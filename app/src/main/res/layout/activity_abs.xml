@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/main_back"
-    tools:context=".ChestActivity">
+    tools:context=".AbsActivity">
 
 
     <RelativeLayout
@@ -29,7 +29,7 @@
             android:fontFamily="sans-serif-black"
             android:paddingLeft="20dp"
             android:paddingTop="20dp"
-            android:text="Chest Exercises"
+            android:text="Abs Exercises"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="40sp"
             android:textStyle="bold"></TextView>
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="28dp"
-                android:text="3x20 sets"
+                android:text="20 secs"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="30sp"
@@ -91,15 +91,26 @@
 
 
                 <ImageView
-                    android:layout_width="176dp"
-                    android:layout_height="278dp"
+                    android:layout_width="203dp"
+                    android:layout_height="326dp"
+                    android:paddingRight="15dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="15dp"
                     android:layout_marginRight="3dp"
-                    android:src="@drawable/chest1" />
+                    android:src="@drawable/abs1" />
 
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="260dp"
+                android:text="Leg Raises"
+                android:textStyle="bold"
+                android:textColor="@android:color/tertiary_text_light"
+                android:textSize="20dp" />
 
 
         </androidx.cardview.widget.CardView>
@@ -122,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="28dp"
-                android:text="3x10 sets"
+                android:text="30 secs"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="30sp"
@@ -137,16 +148,25 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:layout_width="202dp"
+                    android:layout_height="202dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="25dp"
                     android:layout_marginBottom="-3dp"
-                    android:layout_width="234dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/chest3" />
+                    android:src="@drawable/abs2" />
 
 
             </LinearLayout>
 
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="260dp"
+                android:text="Reverse Crunches "
+                android:textColor="@android:color/tertiary_text_light"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
         <!--            column 3-->
@@ -168,7 +188,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="28dp"
-                android:text="4x15 sets"
+                android:text="30 secs"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="30sp"
@@ -183,14 +203,25 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="172dp"
-                    android:layout_height="216dp"
-                    android:layout_marginTop="25dp"
+                    android:layout_width="165dp"
+                    android:layout_height="209dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/chest4" />
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/abs3" />
+
 
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="250dp"
+                android:text="Bicycle Crunches "
+                android:textStyle="bold"
+                android:textColor="@android:color/tertiary_text_light"
+                android:textSize="20dp" />
 
 
         </androidx.cardview.widget.CardView>
@@ -214,7 +245,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="28dp"
-                android:text="4x10 sets"
+                android:text="20 secs"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="30sp"
@@ -234,11 +265,20 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="15dp"
                     android:layout_marginRight="8dp"
-                    android:src="@drawable/chest2" />
+                    android:src="@drawable/abs4" />
 
 
             </LinearLayout>
 
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="250dp"
+                android:text="Cross Crunches "
+                android:textStyle="bold"
+                android:textColor="@android:color/tertiary_text_light"
+                android:textSize="20dp" />
 
         </androidx.cardview.widget.CardView>
 

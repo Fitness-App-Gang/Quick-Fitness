@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/main_back"
-    tools:context=".ChestActivity">
+    tools:context=".ShouldersActivity">
 
 
     <RelativeLayout
@@ -23,20 +23,19 @@
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
             android:layout_marginBottom="-5dp"
             android:background="@android:color/white"
             android:fontFamily="sans-serif-black"
-            android:paddingLeft="20dp"
+            android:paddingLeft="5dp"
             android:paddingTop="20dp"
-            android:text="Chest Exercises"
+            android:text="Shoulder Exercises"
             android:textColor="@android:color/holo_green_dark"
-            android:textSize="40sp"
+            android:textSize="36sp"
             android:textStyle="bold"></TextView>
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="292dp"
+            android:layout_width="275dp"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
@@ -75,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="28dp"
-                android:text="3x20 sets"
+                android:text="3x8 sets"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="30sp"
@@ -91,12 +90,13 @@
 
 
                 <ImageView
-                    android:layout_width="176dp"
-                    android:layout_height="278dp"
+                    android:layout_width="161dp"
+                    android:layout_height="259dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="15dp"
                     android:layout_marginRight="3dp"
-                    android:src="@drawable/chest1" />
+                    android:src="@drawable/shoulders1" />
 
 
             </LinearLayout>
@@ -137,12 +137,13 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_marginTop="25dp"
-                    android:layout_marginBottom="-3dp"
-                    android:layout_width="234dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="159dp"
+                    android:layout_height="187dp"
+                    android:layout_marginRight="5dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/chest3" />
+                    android:layout_marginTop="35dp"
+                    android:layout_marginBottom="-3dp"
+                    android:src="@drawable/shoulders2" />
 
 
             </LinearLayout>
@@ -168,7 +169,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="28dp"
-                android:text="4x15 sets"
+                android:text="3x12 sets"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="30sp"
@@ -183,11 +184,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="172dp"
-                    android:layout_height="216dp"
-                    android:layout_marginTop="25dp"
+                    android:layout_width="174dp"
+                    android:layout_height="222dp"
+                    android:layout_marginRight="10dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/chest4" />
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/shoulders3" />
 
 
             </LinearLayout>
@@ -214,7 +216,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="28dp"
-                android:text="4x10 sets"
+                android:text="3x10 sets"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="30sp"
@@ -232,9 +234,9 @@
                     android:layout_width="175dp"
                     android:layout_height="211dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="25dp"
                     android:layout_marginRight="8dp"
-                    android:src="@drawable/chest2" />
+                    android:src="@drawable/shoulders4" />
 
 
             </LinearLayout>

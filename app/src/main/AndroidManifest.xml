@@ -13,8 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChestActivity"></activity>
-        <!-- <activity android:name=".DetailedRoutineActivity"></activity> -->
+
+        <activity android:name=".AbsActivity"/>
+        <activity android:name=".ShouldersActivity" />
+        <activity android:name=".LegsActivity" />
+        <activity android:name=".BicepsActivity" />
+        <activity android:name=".ChestActivity" />
+        <activity android:name=".BackActivity" /> <!-- <activity android:name=".DetailedRoutineActivity"></activity> -->
+
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
