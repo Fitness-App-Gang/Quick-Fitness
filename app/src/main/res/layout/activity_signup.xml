@@ -4,17 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:background="@drawable/customborder"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
+    tools:context=".SignUpActivity">
 
     <ImageView
-        android:layout_width="333dp"
-        android:layout_height="330dp"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
         android:layout_marginTop="-30dp"
-        android:scaleType="centerCrop"
         android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Become a member today!"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="23dp"
+        android:textStyle="bold" />
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -34,7 +44,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
-            android:hint="Enter Username"
+            android:hint="Enter New Username"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white" />
 
@@ -59,7 +69,34 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
-            android:hint="Enter Password"
+            android:hint="Enter New Password"
+            android:inputType="textPassword"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_edittext"
+        android:gravity="center"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_lock" />
+
+        <EditText
+            android:id="@+id/etConfrimPassword"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="Confirm Password"
             android:inputType="textPassword"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white" />
@@ -67,38 +104,10 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/round_button"
-        android:text="Login"
-        android:textStyle="normal"
-        android:textColor="@android:color/white" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_marginBottom="-20dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:background="@android:color/transparent"
-        android:text="Don't have an account?"
-        android:textColor="@android:color/holo_red_light"
-        android:textStyle="bold" />
-
-    <Button
         android:id="@+id/btnSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:background="@drawable/round_button2"
-        android:text="Sign Up"
-        android:textColor="@android:color/white" />
-    <Button
-        android:id="@+id/btnSignup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:background="@drawable/round_button"
         android:text="Sign Up"
         android:textColor="@android:color/white" />
