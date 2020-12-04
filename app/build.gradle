@@ -30,13 +30,21 @@
 //    }
 //}
 
+
 apply plugin: 'com.android.application'
+
+def apikeyPropertiesFile = rootProject.file("apikey.properties")
+def apikeyProperties = new Properties()
+apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
     defaultConfig {
+        buildConfigField("String", "APP_ID_KEY", apikeyProperties['APP_ID_KEY'])
+        buildConfigField("String", "CLIENT_KEY", apikeyProperties['CLIENT_KEY'])
+
         applicationId "com.example.quickfitness"
         minSdkVersion 21
         targetSdkVersion 29
