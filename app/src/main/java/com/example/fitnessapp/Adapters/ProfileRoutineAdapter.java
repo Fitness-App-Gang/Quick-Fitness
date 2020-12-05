@@ -1,56 +1,41 @@
 package com.example.fitnessapp.Adapters;
 
 import android.content.Context;
-import android.graphics.Typeface;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.example.fitnessapp.CreateActivity;
 import com.example.fitnessapp.R;
 import com.example.fitnessapp.models.Routine;
-import com.parse.FindCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
-import com.parse.ParseFile;
-import com.parse.ParseQuery;
 import com.parse.SaveCallback;
 
 import java.util.List;
 
 import static android.content.ContentValues.TAG;
 
-public class RoutineAdapter extends RecyclerView.Adapter<RoutineAdapter.ViewHolder> {
+public class ProfileRoutineAdapter extends RecyclerView.Adapter<ProfileRoutineAdapter.ViewHolder> {
 
     private Context context;
     private List<Routine> routines;
-    private OnRoutineListener onRoutineListener;
 
-    public RoutineAdapter(Context context, List<Routine> routines, OnRoutineListener onRoutineListener) {
+    public ProfileRoutineAdapter(Context context, List<Routine> routines) {
         this.context = context;
         this.routines = routines;
-        this.onRoutineListener = onRoutineListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_routine, parent, false);
-        return new ViewHolder(view, onRoutineListener);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -75,7 +60,7 @@ public class RoutineAdapter extends RecyclerView.Adapter<RoutineAdapter.ViewHold
         notifyDataSetChanged();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    class ViewHolder extends RecyclerView.ViewHolder{
 
         OnRoutineListener onRoutineListener;
 
@@ -87,17 +72,14 @@ public class RoutineAdapter extends RecyclerView.Adapter<RoutineAdapter.ViewHold
         private CheckBox chkLike;
         private boolean clicked;
 
-        public ViewHolder(@NonNull View itemView, OnRoutineListener onRoutineListener){
+        public ViewHolder(@NonNull View itemView){
             super(itemView);
-            this.onRoutineListener = onRoutineListener;
             tvUsername = itemView.findViewById(R.id.tvUsername);
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvDescription = itemView.findViewById(R.id.tvDescription);
             rbDifficulty = itemView.findViewById(R.id.rbDifficulty);
             tvLikes = itemView.findViewById(R.id.tvLikes);
             chkLike = itemView.findViewById(R.id.chkLike);
-
-            itemView.setOnClickListener(this);
 
             //other place
         }
@@ -156,10 +138,6 @@ public class RoutineAdapter extends RecyclerView.Adapter<RoutineAdapter.ViewHold
 
         }
 
-        @Override
-        public void onClick(View view) {
-            onRoutineListener.onRoutineClick(getAdapterPosition());
-        }
     }
     public interface OnRoutineListener{
         void onRoutineClick(int position);

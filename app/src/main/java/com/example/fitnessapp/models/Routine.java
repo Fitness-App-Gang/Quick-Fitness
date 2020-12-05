@@ -7,12 +7,17 @@ import com.parse.ParseUser;
 
 @ParseClassName("Routine")
 public class Routine extends ParseObject {
+    public static final String KEY_OBJECTID="objectId";
     public static final String KEY_AUTHOR="author";
     public static final String KEY_TITLE="title";
     public static final String KEY_DESCRIPTION="description";
     public static final String KEY_DIFFICULTY="difficulty";
     public static final String KEY_LIKES="likes";
     public static final String KEY_CREATED="createdAt";
+
+    public String getId() {
+        return getString(KEY_OBJECTID);
+    }
 
     public ParseUser getAuthor(){
         return getParseUser(KEY_AUTHOR);
