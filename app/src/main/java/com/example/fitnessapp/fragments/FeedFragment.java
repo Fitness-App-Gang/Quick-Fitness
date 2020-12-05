@@ -54,6 +54,7 @@ public class FeedFragment extends Fragment implements RoutineAdapter.OnRoutineLi
                 Log.d(TAG, "Successfull Button press!!!");
                 Intent i = new Intent(getActivity(), CreateActivity.class);
                 startActivity(i);
+                queryPosts();
             }
         });
         return view;
