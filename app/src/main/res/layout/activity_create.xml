@@ -5,100 +5,108 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_back"
+
     tools:context=".CreateActivity">
 
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="7dp">
 
     <TextView
         android:id="@+id/textGrid"
-        android:layout_width="wrap_content"
-        android:layout_height="58dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="19dp"
         android:text="Create Routine"
         android:textColor="@android:color/white"
         android:textSize="40sp"
         android:textStyle="bold"></TextView>
 
     <EditText
-        android:layout_marginTop="90dp"
-        android:background="@drawable/border"
+
         android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textGrid"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/feed_background"
         android:ems="10"
-        android:textSize="28sp"
+        android:hint="Routine Title"
         android:inputType="textMultiLine"
         android:minLines="1"
-        android:hint="Routine Title"/>
+        android:textSize="28sp" />
 
 
-    <EditText
-        android:background="@drawable/border"
-        android:id="@+id/etDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/etTitle"
-        android:layout_marginTop="-1dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        android:minLines="6"
-        android:hint="Routine Description"/>
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/etTitle"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/feed_background"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:minLines="6"
+            android:hint="Routine Description"/>
 
-    <TextView
-        android:background="@drawable/border"
-        android:id="@+id/tvDifficulty"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etDescription"
-        android:layout_marginTop="26dp"
-        android:textAlignment="center"
-        android:textSize="24dp"
-        android:textColor="@color/colorAccent"
-        android:text="Set Difficulty:"
-        />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/feed_background"
+            android:layout_below="@+id/etDescription"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/tvDifficulty"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textSize="24dp"
+                android:layout_marginHorizontal="7dp"
+                android:textColor="@color/colorAccent"
+                android:text="Set Difficulty:"
+                />
 
-    <RatingBar
-        android:id="@+id/rvSetDifficulty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etDescription"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="17dp"
-        android:layout_toEndOf="@+id/tvDifficulty"
-        android:numStars="3"
-        android:progressBackgroundTint="@android:color/holo_green_dark"
-        android:progressTint="@android:color/black"
-        android:secondaryProgressTint="@android:color/black" />
+            <RatingBar
+                android:id="@+id/rvSetDifficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@+id/tvDifficulty"
+                android:numStars="3"
+                style="@style/difficultyRatingLrg"/>
+        </LinearLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabCreate"
-        style="@style/floatingButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etDescription"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="16dp"
-        android:backgroundTint="@android:color/white"
-        android:src="@drawable/plus_fill"
-        android:tint="@android:color/holo_green_dark"
-        />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="203dp"
-        android:layout_height="221dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="94dp"
-        android:layout_marginBottom="-40dp"
-        app:srcCompat="@drawable/logo" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabCreate"
+            style="@style/floatingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etDescription"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorBackground"
+            android:src="@drawable/plus_fill"
+            android:tint="@color/colorAccent"
+            />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="203dp"
+            android:layout_height="221dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="94dp"
+            android:layout_marginBottom="-40dp"
+            app:srcCompat="@drawable/logo" />
+    </RelativeLayout>
 
 </RelativeLayout>

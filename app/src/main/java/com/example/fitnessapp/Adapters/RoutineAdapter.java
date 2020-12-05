@@ -38,17 +38,19 @@ public class RoutineAdapter extends RecyclerView.Adapter<RoutineAdapter.ViewHold
 
     private Context context;
     private List<Routine> routines;
+    private OnRoutineListener onRoutineListener;
 
-    public RoutineAdapter(Context context, List<Routine> routines) {
+    public RoutineAdapter(Context context, List<Routine> routines, OnRoutineListener onRoutineListener) {
         this.context = context;
         this.routines = routines;
+        this.onRoutineListener = onRoutineListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_routine, parent, false);
-        return new ViewHolder(view);
+        return new ViewHolder(view, onRoutineListener);
     }
 
     @Override
@@ -73,7 +75,10 @@ public class RoutineAdapter extends RecyclerView.Adapter<RoutineAdapter.ViewHold
         notifyDataSetChanged();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder{
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+
+        OnRoutineListener onRoutineListener;
+
         private TextView tvUsername;
         private TextView tvTitle;
         private TextView tvDescription;
@@ -82,14 +87,17 @@ public class RoutineAdapter extends RecyclerView.Adapter<RoutineAdapter.ViewHold
         private CheckBox chkLike;
         private boolean clicked;
 
-        public ViewHolder(@NonNull View itemView){
+        public ViewHolder(@NonNull View itemView, OnRoutineListener onRoutineListener){
             super(itemView);
+            this.onRoutineListener = onRoutineListener;
             tvUsername = itemView.findViewById(R.id.tvUsername);
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvDescription = itemView.findViewById(R.id.tvDescription);
             rbDifficulty = itemView.findViewById(R.id.rbDifficulty);
             tvLikes = itemView.findViewById(R.id.tvLikes);
             chkLike = itemView.findViewById(R.id.chkLike);
+
+            itemView.setOnClickListener(this);
 
             //other place
         }
@@ -119,7 +127,7 @@ public class RoutineAdapter extends RecyclerView.Adapter<RoutineAdapter.ViewHold
                                 if(e != null){
                                     Log.e(TAG, "Eror while saving routine", e);
                                 }
-                                Toast.makeText(context, "Liked", Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(context, "Liked", Toast.LENGTH_SHORT).show();
                                 tvLikes.setText(Integer.toString(routine.getLikes()));
                                 clicked = true;
                                 return;
@@ -134,7 +142,7 @@ public class RoutineAdapter extends RecyclerView.Adapter<RoutineAdapter.ViewHold
                                 if(e != null){
                                     Log.e(TAG, "Eror while saving routine", e);
                                 }
-                                Toast.makeText(context, "Unliked", Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(context, "Unliked", Toast.LENGTH_SHORT).show();
                                 tvLikes.setText(Integer.toString(routine.getLikes()));
                                 clicked = true;
                                 return;
@@ -147,6 +155,14 @@ public class RoutineAdapter extends RecyclerView.Adapter<RoutineAdapter.ViewHold
             });
 
         }
+
+        @Override
+        public void onClick(View view) {
+            onRoutineListener.onRoutineClick(getAdapterPosition());
+        }
+    }
+    public interface OnRoutineListener{
+        void onRoutineClick(int position);
     }
 
 }

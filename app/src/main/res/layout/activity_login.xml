@@ -76,7 +76,7 @@
         android:textStyle="normal"
         android:textColor="@android:color/white" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_marginBottom="-20dp"
         android:layout_height="wrap_content"
@@ -93,6 +93,12 @@
         android:layout_marginTop="30dp"
         android:background="@drawable/round_button2"
         android:text="Sign Up"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/white"
         android:textColor="@android:color/white" />
 
 </LinearLayout>

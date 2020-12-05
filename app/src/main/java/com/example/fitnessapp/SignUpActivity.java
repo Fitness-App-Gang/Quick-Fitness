@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.fitnessapp.fragments.MuscleFragment;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
@@ -101,14 +100,14 @@ public class SignUpActivity extends AppCompatActivity {
                         return;
                     }
                     Toast.makeText(SignUpActivity.this, "Successful sign up!", Toast.LENGTH_SHORT).show();
-                    goMuscleFragment();
+                    goMainActivity();
                 }
             });
         }
     }
 
-    private void goMuscleFragment() {
-        Intent i = new Intent(this, MuscleFragment.class);
+    private void goMainActivity() {
+        Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
 //        finish();
     }

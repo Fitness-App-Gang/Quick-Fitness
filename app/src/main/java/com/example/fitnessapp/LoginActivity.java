@@ -26,6 +26,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        if(ParseUser.getCurrentUser() != null){
+            goMainActivity();
+        }
 
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
@@ -71,12 +74,13 @@ public class LoginActivity extends AppCompatActivity {
     private void goMainActivity() {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
-//        finish();
+        finish();
     }
 
     private void goSignUpActivity() {
         Intent i = new Intent(this, SignUpActivity.class);
         startActivity(i);
+        finish();
     }
 
 }

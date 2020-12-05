@@ -4,11 +4,14 @@ import com.parse.ParseClassName;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
+import static com.example.fitnessapp.models.Routine.KEY_CREATED;
+
 @ParseClassName("Comment")
 public class Comment extends ParseObject {
     public static final String KEY_AUTHOR="author";
     public static final String KEY_TEXT="text";
     public static final String KEY_PARENTROUTINE="parentRoutine";
+    public static final String KEY_CREATED="createdAt";
 
     public ParseUser getAuthor(){
         return getParseUser(KEY_AUTHOR);
@@ -30,7 +33,11 @@ public class Comment extends ParseObject {
         return getParseObject(KEY_PARENTROUTINE);
     }
 
-    public void setParentRoutine(String parentRoutine){
+    public void setParentRoutine(ParseObject parentRoutine){
         put(KEY_PARENTROUTINE, parentRoutine);
+    }
+
+    public String getCreated(){
+        return getString(KEY_CREATED);
     }
 }
