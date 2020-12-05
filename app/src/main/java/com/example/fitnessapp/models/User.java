@@ -7,11 +7,16 @@ import com.parse.ParseUser;
 
 @ParseClassName("User")
 public class User extends ParseUser {
+    public static final String KEY_OBJECTID="objectId";
     public static final String KEY_USERNAME="username";
     public static final String KEY_PASSWORD="password";
     public static final String KEY_EMAIL="email";
     public static final String KEY_PROFILEPICTURE="profilePicture";
     public static final String KEY_BIO="bio";
+
+    public String getId(){
+        return getString(KEY_OBJECTID);
+    }
 
     public String getUsername(){
         return getString(KEY_USERNAME);
