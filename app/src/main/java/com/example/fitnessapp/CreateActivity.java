@@ -66,7 +66,7 @@ public class CreateActivity extends AppCompatActivity {
 
     }
 
-    private boolean postRoutine(ParseUser curUser, String routineTitle, String routineDescription, float routineDifficulty) {
+    private boolean postRoutine(ParseUser curUser, String routineTitle, String routineDescription, final float routineDifficulty) {
         Routine routine = new Routine();
         final boolean[] success = {true};
         routine.setAuthor(curUser);
@@ -78,7 +78,7 @@ public class CreateActivity extends AppCompatActivity {
             @Override
             public void done(ParseException e) {
                 if(e != null){
-                    Log.e(TAG, "Eror while saving routine", e);
+                    Log.e(TAG, "Error while saving routine", e);
                     Toast.makeText(CreateActivity.this, "Routine must have content", Toast.LENGTH_SHORT).show();
                     success[0] = false;
                     return;
@@ -86,7 +86,7 @@ public class CreateActivity extends AppCompatActivity {
                 Log.i(TAG, "Routine saved successfully!");
                 etTitle.setText("");
                 etDescription.setText("");
-                //set difficulty back to 0
+                rbDifficulty.setRating(0);
             }
         });
         return success[0];

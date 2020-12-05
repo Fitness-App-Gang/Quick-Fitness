@@ -30,7 +30,7 @@ public class Comment extends ParseObject {
         return getParseObject(KEY_PARENTROUTINE);
     }
 
-    public void setParentRoutine(String parentRoutine){
+    public void setParentRoutine(ParseObject parentRoutine){
         put(KEY_PARENTROUTINE, parentRoutine);
     }
 }

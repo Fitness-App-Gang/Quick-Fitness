@@ -17,6 +17,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.fitnessapp.Adapters.RoutineAdapter;
 import com.example.fitnessapp.CreateActivity;
+import com.example.fitnessapp.DetailedRoutineActivity;
 import com.example.fitnessapp.R;
 import com.example.fitnessapp.models.Routine;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -27,7 +28,7 @@ import com.parse.ParseQuery;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FeedFragment extends Fragment {
+public class FeedFragment extends Fragment implements RoutineAdapter.OnRoutineListener {
 
     public static final String TAG = "FeedFragment";
 
@@ -73,7 +74,7 @@ public class FeedFragment extends Fragment {
         });
         rvRoutines = view.findViewById(R.id.rvRoutines);
         allRoutines = new ArrayList<>();
-        adapter = new RoutineAdapter(getContext(),allRoutines);
+        adapter = new RoutineAdapter(getContext(),allRoutines, this);
 
         rvRoutines.setAdapter(adapter);
         rvRoutines.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -95,7 +96,7 @@ public class FeedFragment extends Fragment {
                     return;
                 }
                 for (Routine routine: objects){
-                    Log.i(TAG, "Routine: " + routine.getTitle() + ", USERNAME: " + routine.getAuthor() + ", Description: " + routine.getDescription());
+                    Log.i(TAG, "Routine: " + routine.getTitle() + ", USERNAME: " + routine.getAuthor());
                 }
                 allRoutines.clear();
                 allRoutines.addAll(objects);
@@ -104,4 +105,16 @@ public class FeedFragment extends Fragment {
             }
         });
     }
+
+    @Override
+    public void onRoutineClick(int position) {
+        Log.d(TAG, "Routine in position " + Integer.toString(position) + "clicked");
+        Routine r = allRoutines.get(position);
+        String rUser = r.getAuthor().getUsername();
+        Intent i = new Intent(getContext(), DetailedRoutineActivity.class);
+        i.putExtra("routineID", r.getObjectId());
+        i.putExtra("username", rUser);
+        this.startActivity(i);
+    }
+
 }
