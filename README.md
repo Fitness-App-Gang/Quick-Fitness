@@ -32,7 +32,7 @@ Gives users information about muscle groups and how to work them out. Allows the
    - [x] User can click on post to view full routine and the comments for it.
 - [x] User can post to comment section of post
 - [x] Profile pages for each user
-   - [ ] User can tap between different routine types associated with user.
+   - [x] User can tap between different routine types associated with user.
 
 **Optional Nice-to-have Stories**
 
