@@ -29,8 +29,8 @@ Gives users information about muscle groups and how to work them out. Allows the
 - [X] Users can can view and post routines and progress.
 - [X] Users can can view routines and progress.
    - [x] User can like post
-   - [ ] User can click on post to view full routine and the comments for it.
-- [ ] User can post to comment section of post
+   - [x] User can click on post to view full routine and the comments for it.
+- [x] User can post to comment section of post
 - [x] Profile pages for each user
    - [ ] User can tap between different routine types associated with user.
 
