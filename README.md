@@ -44,6 +44,7 @@ Gives users information about muscle groups and how to work them out. Allows the
 - [ ] Have saved stories save locally
 
 <img src='https://github.com/Fitness-App-Gang/Quick-Fitness/blob/master/APP4.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='FitnessApp2.gif' title='Video Walkthrough' width='300' alt='Video Walkthrough' />
 
 ### 2. Screen Archetypes
 
