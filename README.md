@@ -43,7 +43,7 @@ Gives users information about muscle groups and how to work them out. Allows the
 - [ ] Allow users to track and modify sets and reps
 - [ ] Have saved stories save locally
 
-<img src='https://github.com/Fitness-App-Gang/Quick-Fitness/upload/master' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/Fitness-App-Gang/Quick-Fitness/blob/master/APP4.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### 2. Screen Archetypes
 
