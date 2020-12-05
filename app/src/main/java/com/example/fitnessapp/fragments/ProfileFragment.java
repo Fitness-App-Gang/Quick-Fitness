@@ -13,8 +13,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitnessapp.Adapters.ProfileRoutineAdapter;
 import com.example.fitnessapp.Adapters.RoutineAdapter;
 import com.example.fitnessapp.LoginActivity;
 import com.example.fitnessapp.R;
@@ -43,7 +45,7 @@ public class ProfileFragment extends Fragment {
     ImageView ivProfile;
     List<Routine> routines;
     RecyclerView rvProfileRoutines;
-    RoutineAdapter adapter;
+    ProfileRoutineAdapter adapter;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -67,11 +69,12 @@ public class ProfileFragment extends Fragment {
         tvDescription = (TextView) view.findViewById(R.id.tvDescription);
         ivProfile = (ImageView) view.findViewById(R.id.ivProfile);
         ivProfile.setImageResource(R.drawable.anonymous);
-        rvProfileRoutines = view.findViewById(R.id.rvProfileRoutines);
+        rvProfileRoutines = (RecyclerView) view.findViewById(R.id.rvProfileRoutines);
         routines = new ArrayList<Routine>();
 
-        adapter = new RoutineAdapter(view.getContext(), routines);
+        adapter = new ProfileRoutineAdapter(view.getContext(),routines);
         rvProfileRoutines.setAdapter(adapter);
+        rvProfileRoutines.setLayoutManager(new LinearLayoutManager(getContext()));
 
         btnPosts.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,9 +95,11 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        tvUsername.setText("A user!");
+        tvUsername.setText(ParseUser.getCurrentUser().getUsername());
 
-        tvDescription.setText("Likes long walks on the beach");
+        tvDescription.setText("No description... probably out getting gains instead.");
+
+        queryPosts(0);
     }
 
     private void queryPosts(int type){
@@ -107,40 +112,48 @@ public class ProfileFragment extends Fragment {
             case 1:
                 //find RoutineIds in SavedRoutines where ownerId == currUser
                 Log.d(TAG, "type: " + type);
-                ParseQuery<SavedRoutines> sQuery = ParseQuery.getQuery(SavedRoutines.class);
-                sQuery.whereEqualTo(SavedRoutines.KEY_OWNERID,currUser);
+                ParseQuery<Routine> sQuery = ParseQuery.getQuery(Routine.class);
+                sQuery.whereEqualTo(Routine.KEY_AUTHOR,currUser);
                 sQuery.include(SavedRoutines.KEY_ROUTINEID);
-                sQuery.findInBackground(new FindCallback<SavedRoutines>() {
+                sQuery.findInBackground(new FindCallback<Routine>() {
                     @Override
-                    public void done(List<SavedRoutines> objects, ParseException e) {
+                    public void done(List<Routine> objects, ParseException e) {
                         Log.d(TAG, "finished query");
                         if(e != null){
                             Log.e(TAG, "Issue getting routines", e);
                             return;
                         }
-                        for (SavedRoutines routine: objects){
+                        for (Routine routine: objects){
                             Log.i(TAG, "Routine: " + routine);
-                            routines.add((Routine) routine.getParseObject(SavedRoutines.KEY_ROUTINEID));
+                        }
+//                        adapter.addAll(objects);
+                        adapter.notifyDataSetChanged();
+                        if (adapter.getItemCount() <= 0) {
+                            Toast.makeText(getView().getContext(), "Nothing Here Yet!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
                 break;
             case 2:
                 Log.d(TAG, "type: " + type);
-                ParseQuery<LikedRoutines> lQuery = ParseQuery.getQuery(LikedRoutines.class);
-                lQuery.whereEqualTo(LikedRoutines.KEY_OWNERID,currUser);
-                lQuery.include(SavedRoutines.KEY_ROUTINEID);
-                lQuery.findInBackground(new FindCallback<LikedRoutines>() {
+                ParseQuery<Routine> lQuery = ParseQuery.getQuery(Routine.class);
+                lQuery.whereEqualTo(Routine.KEY_AUTHOR,currUser);
+                lQuery.include(LikedRoutines.KEY_ROUTINEID);
+                lQuery.findInBackground(new FindCallback<Routine>() {
                     @Override
-                    public void done(List<LikedRoutines> objects, ParseException e) {
+                    public void done(List<Routine> objects, ParseException e) {
                         Log.d(TAG, "finished query");
                         if(e != null){
                             Log.e(TAG, "Issue getting routines", e);
                             return;
                         }
-                        for (LikedRoutines routine: objects){
+                        for (Routine routine: objects){
                             Log.i(TAG, "Routine: " + routine);
-                            routines.add((Routine) routine.getParseObject(SavedRoutines.KEY_ROUTINEID));
+                        }
+//                        adapter.addAll(objects);
+                        adapter.notifyDataSetChanged();
+                        if (adapter.getItemCount() <= 0) {
+                            Toast.makeText(getView().getContext(), "Nothing Here Yet!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
